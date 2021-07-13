@@ -1,0 +1,63 @@
+<!-- consumerId: number;
+  sqft: number;
+  propertyType: string;
+  propertyAge: number;
+  costOfAsset: number;
+  salvageValue: number;
+  usefulLifeOfAsset: number; -->
+<div class="container">
+  <h1 class="text-primary">Create Consumer</h1>
+  <form #conForm="ngForm" (ngSubmit)="onSubmit(conForm.value)">
+    <div class="form-group">
+      <label>Consumer Id</label>
+      <input
+        type="text"
+        class="form-control"
+        name="consumerId"
+        [(ngModel)]="p.consumerId"
+      />
+    </div>
+    <div class="form-group">
+      <label>Square Feet</label>
+      <input type="text" class="form-control" name="sqft" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Property Type</label>
+      <input
+        type="text"
+        class="form-control"
+        name="propertyType"
+        required="required"
+        ngModel
+      />
+      <div class="form-group">
+        <label>Storeys</label>
+        <input type="text" name="storeys" class="form-control" ngModel />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Property Age</label>
+      <input type="text" name="propertyAge" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Cost Of Asset</label>
+      <input type="text" name="costOfAsset" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Salvage Value</label>
+      <input type="text" name="salvageValue" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Useful Life Of Asset</label>
+      <input
+        type="text"
+        name="usefulLifeOfAsset"
+        class="form-control"
+        ngModel
+      />
+    </div>
+
+    <input type="submit" class="btn btn-primary" />
+    <br />
+  </form>
+</div>

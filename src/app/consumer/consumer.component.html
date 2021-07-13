@@ -1,0 +1,35 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Consumer Id</th>
+        <th>Consumer name</th>
+        <th>Email</th>
+        <th>Business Category</th>
+        <th style="text-align: center;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let consumer of cons">
+        <td>{{ consumer.id }}</td>
+        <td>{{ consumer.firstName }}</td>
+        <td>{{ consumer.email }}</td>
+        <td>{{ consumer.business.businessType }}</td>
+        <td>
+          <a href="/view/{{ consumer.id }}">View Consumer Business</a>
+          |
+          <a href="/update/{{ consumer.id }}">Update Consumer Business</a>
+          |
+          <a href="/property/{{ consumer.id }}">
+            View Property and policy actions
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button (click)="createConsumerBusiness()" class="btn btn-success">
+      Create
+    </button>
+  </div>
+</div>

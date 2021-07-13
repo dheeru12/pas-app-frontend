@@ -1,0 +1,123 @@
+<div class="container">
+  <h1 class="text-primary">Create Consumer</h1>
+  <form #conForm="ngForm" (ngSubmit)="onSubmit(conForm.value)">
+    <div class="form-group">
+      <label>First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="firstName"
+        [(ngModel)]="consumer.firstName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        class="form-control"
+        [(ngModel)]="consumer.lastName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input
+        type="date"
+        class="form-control"
+        required="required"
+        name="dateOfBirth"
+        [(ngModel)]="consumer.dateOfBirth"
+      />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="consumer.email"
+      />
+    </div>
+    <div class="form-group">
+      <label>Pan</label>
+      <input
+        type="text"
+        class="form-control"
+        name="pan"
+        [(ngModel)]="consumer.pan"
+      />
+    </div>
+    <div class="form-group">
+      <label>Business Overview</label>
+      <input
+        type="text"
+        name="businessOverview"
+        class="form-control"
+        name="businessOverview"
+        [(ngModel)]="consumer.businessOverview"
+      />
+    </div>
+    <div class="form-group">
+      <label>Business Type</label>
+      <input
+        type="text"
+        name="businessType"
+        class="form-control"
+        name="businessType"
+        [(ngModel)]="consumer.businessType"
+      />
+    </div>
+    <div class="form-group">
+      <label>Annual TurnOver</label>
+      <input
+        type="text"
+        name="annualTurnover"
+        class="form-control"
+        name="annualTurnover"
+        [(ngModel)]="consumer.annualTurnover"
+      />
+    </div>
+    <div class="form-group">
+      <label>Total Employees</label>
+      <input
+        type="text"
+        name="totalEmployees"
+        class="form-control"
+        name="totalEmployees"
+        [(ngModel)]="consumer.totalEmployees"
+      />
+    </div>
+    <div class="form-group">
+      <label>Agent Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="agentUsername"
+        [(ngModel)]="consumer.agentUsername"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <label>Captial Invested</label>
+      <input
+        type="text"
+        name="capitalInvested"
+        class="form-control"
+        name="capitalInvested"
+        [(ngModel)]="consumer.capitalInvested"
+      />
+    </div>
+    <div class="form-group">
+      <label>Business Age</label>
+      <input
+        type="text"
+        name="businessAge"
+        class="form-control"
+        name="businessAge"
+        [(ngModel)]="consumer.businessAge"
+      />
+    </div>
+    <input type="submit" class="btn btn-primary" />
+    <br />
+  </form>
+</div>

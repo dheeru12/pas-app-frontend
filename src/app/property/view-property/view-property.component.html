@@ -1,0 +1,65 @@
+<!-- consumerId: number = 0;
+  businessId: number = 0;
+  sqft: number = 0;
+  propertyType: string = '';
+  propertyAge: number = 0;
+  costOfAsset: number = 0;
+  salvageValue: number = 0;
+  usefulLifeOfAsset: number = 0;
+  storeys: number = 0; -->
+
+<p *ngIf="props">
+  consumerId:
+  {{ props.consumerId }}
+  <br />
+  businessId:
+  {{ props.businessId }}
+  <br />
+  sqft:
+  {{ props.sqft }}
+  <br />
+  propertyType:
+  {{ props.propertyType }}
+  <br />
+  propertyAge:
+  {{ props.propertyAge }}
+  <br />
+  cost of asset:
+  {{ props.costOfAsset }}
+  <br />
+  salvage Value:
+  {{ props.salvageValue }}
+  <br />
+  usefulLifeOfAsset:
+  {{ props.usefulLifeOfAsset }}
+  <br />
+  storeys:
+  {{ props.storeys }}
+  <br />
+</p>
+
+<button *ngIf="!props" class="btn btn-success" (click)="createProperty()">
+  Create Property
+</button>
+<button
+  *ngIf="props"
+  class="btn btn-success"
+  (click)="updateProperty(props.id)"
+>
+  update Property
+</button>
+<button
+  *ngIf="props && !policy"
+  class="btn btn-success"
+  (click)="createPolicy(props.id)"
+>
+  create Policy
+</button>
+
+<button
+  *ngIf="props && policy"
+  class="btn btn-success"
+  (click)="viewPolicy(props.id, props.businessId)"
+>
+  view Policy
+</button>

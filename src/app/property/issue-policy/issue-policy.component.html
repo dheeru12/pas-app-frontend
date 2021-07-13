@@ -1,0 +1,12 @@
+<table>
+  <tr *ngFor="let policy of policies">
+    <td>{{ policy.pid }}</td>
+    <td>{{ policy.assured_sum }}</td>
+    <td>{{ policy.type }}</td>
+    <td>{{ policy.tenure }}</td>
+    <td><button (click)="selectPolicyId(policy.pid)">select</button></td>
+  </tr>
+</table>
+<input type="text" name="pid" [(ngModel)]="issue.policyid" />
+<button (click)="paymentSuccessfull()">Accept payment Status</button>
+<button (click)="onCancel()">Cancel</button>

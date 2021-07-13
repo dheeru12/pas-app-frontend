@@ -1,0 +1,57 @@
+<div class="container">
+  <h1 class="text-primary">Create Consumer</h1>
+  <form #conForm="ngForm" (ngSubmit)="onSubmit(conForm.value)">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" name="firstName" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name="lastName" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input
+        type="date"
+        class="form-control"
+        name="dateOfBirth"
+        required="required"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Pan</label>
+      <input type="text" name="pan" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Business Overview</label>
+      <input type="text" name="businessOverview" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Business Type</label>
+      <input type="text" name="businessType" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Annual TurnOver</label>
+      <input type="text" name="annualTurnover" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Total Employees</label>
+      <input type="text" name="totalEmployees" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Captial Invested</label>
+      <input type="text" name="capitalInvested" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Business Age</label>
+      <input type="text" name="businessAge" class="form-control" ngModel />
+    </div>
+    <input type="submit" class="btn btn-primary" />
+    <br />
+  </form>
+</div>

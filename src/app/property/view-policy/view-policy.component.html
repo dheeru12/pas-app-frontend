@@ -1,0 +1,24 @@
+<div>id:{{ policy.id }}</div>
+<div>consumer id:{{ policy.consumerid }}</div>
+<div>business id:{{ policy.businessid }}</div>
+<div *ngIf="policy.paymentdetails">
+  payment details:{{ policy.paymentdetails }}
+</div>
+<div *ngIf="policy.acceptancestatus">
+  acceptance status:{{ policy.acceptancestatus }}
+</div>
+<div *ngIf="policy.policystatus">
+  status:
+  {{ policy.policystatus }}
+</div>
+<div *ngIf="policy.effectivedate">
+  effective date:{{ policy.effectivedate }}
+</div>
+<div *ngIf="policy.covered_sum">covered sum:{{ policy.covered_sum }}</div>
+<button
+  *ngIf="policy.policystatus == 'Initiated'"
+  class="btn btn-success"
+  (click)="issuePolicy()"
+>
+  Issue Policy
+</button>
